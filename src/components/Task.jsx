@@ -1,9 +1,9 @@
 import React from 'react'
 
-const Task = ({ task }) => {
+const Task = ({ todo }) => {
   return (
     <div className='task'>        
-      <li>{task}</li>
+      <li>{todo}</li>
       <button>Delete</button>
     </div>
   )

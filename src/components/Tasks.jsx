@@ -1,7 +1,7 @@
-import React from 'react'
-import Task from './Task'
+import React from 'react';
+import Task from './Task';
 
-const Tasks = ({ tasks, handleSubmit, handleChange }) => {
+const Tasks = ({ tasks, handleSubmit, handleChange, todos }) => {
   return (
     <div className='tasks'>
         <form onSubmit={handleSubmit}> 
@@ -14,7 +14,9 @@ const Tasks = ({ tasks, handleSubmit, handleChange }) => {
             <button>Add</button>
         </form>
       <ul>
-        {tasks.map(task => (<Task task={task} />) )}
+        {
+        todos.map(todo => <Task todo={todo} /> )
+        }
       </ul>
     </div>
   )

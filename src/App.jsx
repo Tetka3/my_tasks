@@ -5,21 +5,23 @@ import { useState } from "react"
 
 function App() {
   
-  const[tasks, setTasks] = useState(["Mangoes","Apples"]);
+  const[tasks, setTasks] = useState("");
+  const [todos, setTodos]  = useState([]);
 
   const handleChange = (e) =>{
-    // setTasks(e.target.value);
-    console.log("hhh");
+    if (!tasks) return;
+    setTasks(e.target.value);
   }
   const handleSubmit = (e) =>  {
     e.preventDefault();
-    console.log("hi")
+    setTodos(currentTodos => [tasks, ...currentTodos]);
+    setTasks("");
   }
 
   return (
     <>
       <Navbar/>
-      <Tasks tasks={tasks} handleSubmit={handleSubmit} handleChange={handleChange}/>
+      <Tasks tasks={tasks} handleSubmit={handleSubmit} handleChange={handleChange} todos={todos}/>
     </>
   )
 }
