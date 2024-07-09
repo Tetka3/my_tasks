@@ -5,7 +5,7 @@ import { useState } from "react"
 
 function App() {
   
-  const[tasks, setTasks] = useState([]);
+  const[tasks, setTasks] = useState(["Mangoes","Apples"]);
 
   const handleChange = (e) =>{
     // setTasks(e.target.value);
