@@ -8,7 +8,7 @@ const Tasks = ({ tasks, handleSubmit, handleChange }) => {
             <input 
                 type='text' 
                 placeholder='Add task' 
-                name={tasks} 
+                value={tasks} 
                 onChange={handleChange}
             />
             <button>Add</button>

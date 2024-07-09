@@ -5,19 +5,21 @@ import { useState } from "react"
 
 function App() {
   
-  const[tasks, setTasks] = useState(["Shop", "market"])
+  const[tasks, setTasks] = useState([]);
+
   const handleChange = (e) =>{
-    setTasks(e.target.value);
-    console.log(setTasks);
+    // setTasks(e.target.value);
+    console.log("hhh");
   }
-  const handleSubmit = (e) =>{
+  const handleSubmit = (e) =>  {
     e.preventDefault();
+    console.log("hi")
   }
 
   return (
     <>
       <Navbar/>
-      <Tasks tasks={tasks} setTasks={setTasks}  handleSubmit={handleSubmit} handleChange={handleChange}/>
+      <Tasks tasks={tasks} handleSubmit={handleSubmit} handleChange={handleChange}/>
     </>
   )
 }
