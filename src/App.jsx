@@ -9,10 +9,12 @@ function App() {
   const [todos, setTodos]  = useState([]);
 
   const handleChange = (e) => {
+
     setTasks(e.target.value); 
   }
   const handleSubmit = (e) =>  {
     e.preventDefault();
+    if (!tasks) return;
     setTodos(currentTodos => [tasks, ...currentTodos]);
     setTasks("");
   }
