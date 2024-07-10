@@ -17,11 +17,21 @@ function App() {
     setTodos(currentTodos => [tasks, ...currentTodos]);
     setTasks("");
   }
+  const handleDelete = (e) =>  {
+    
+  }
+
 
   return (
     <>
       <Navbar/>
-      <Tasks tasks={tasks} handleSubmit={handleSubmit} handleChange={handleChange} todos={todos}/>
+      <Tasks 
+        tasks={tasks} 
+        handleSubmit={handleSubmit} 
+        handleChange={handleChange} 
+        handleDelete={handleDelete} 
+        todos={todos}
+      />
     </>
   )
 }

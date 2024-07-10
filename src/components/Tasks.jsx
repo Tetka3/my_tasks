@@ -1,7 +1,7 @@
 import React from 'react';
 import Task from './Task';
 
-const Tasks = ({ tasks, handleSubmit, handleChange, todos }) => {
+const Tasks = ({ tasks, handleSubmit, handleChange, todos, handleDelete }) => {
   return (
     <div className='tasks'>
         <form onSubmit={handleSubmit}> 
@@ -15,7 +15,7 @@ const Tasks = ({ tasks, handleSubmit, handleChange, todos }) => {
         </form>
       <ul>
         {
-        todos.map(todo => <Task todo={todo} /> )
+        todos.map((todo) => <Task todo={todo} handleDelete={handleDelete} /> )
         }
       </ul>
     </div>
