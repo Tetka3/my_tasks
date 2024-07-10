@@ -5,13 +5,16 @@ const Tasks = ({ tasks, handleSubmit, handleChange, todos, handleDelete }) => {
   return (
     <div className='tasks'>
         <form onSubmit={handleSubmit}> 
-            <input 
-                type='text' 
-                placeholder='Add task' 
-                value={tasks} 
-                onChange={handleChange}
-            />
-            <button>Add</button>
+          <fieldset>
+            <legend>Add Tasks</legend> 
+              <input 
+                  type='text' 
+                  placeholder='Add task' 
+                  value={tasks} 
+                  onChange={handleChange}
+              />
+              <button>Add</button>  
+            </fieldset>          
         </form>
       <ul>
         {todos.length > 0 ?
