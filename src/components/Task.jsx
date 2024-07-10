@@ -3,8 +3,8 @@ import React from 'react'
 const Task = ({ todo, handleDelete }) => {
   return (
     <div className='task'>        
-      <li key={index}>{todo}</li>
-      <button onClick={() => handleDelete(todo.index)}>Delete</button>
+      <li>{todo}</li>
+      <button onClick={() => handleDelete(todo)}>Delete</button>
     </div>
   )
 }

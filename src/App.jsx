@@ -8,16 +8,15 @@ function App() {
   const[tasks, setTasks] = useState("");
   const [todos, setTodos]  = useState([]);
 
-  const handleChange = (e) =>{
-    if (!tasks) return;
-    setTasks(e.target.value);
+  const handleChange = (e) => {
+    setTasks(e.target.value); 
   }
   const handleSubmit = (e) =>  {
     e.preventDefault();
     setTodos(currentTodos => [tasks, ...currentTodos]);
     setTasks("");
   }
-  const handleDelete = (e) =>  {
+  const handleDelete = () =>  {
     
   }
 
