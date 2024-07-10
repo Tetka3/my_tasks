@@ -18,8 +18,8 @@ function App() {
     setTodos(currentTodos => [tasks, ...currentTodos]);
     setTasks("");
   }
-  const handleDelete = () =>  {
-    
+  const handleDelete = (id) =>  {
+    console.log("delete" )    
   }
 
 

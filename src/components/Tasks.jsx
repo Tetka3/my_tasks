@@ -14,8 +14,10 @@ const Tasks = ({ tasks, handleSubmit, handleChange, todos, handleDelete }) => {
             <button>Add</button>
         </form>
       <ul>
-        {
-        todos.map((todo) => <Task todo={todo} handleDelete={handleDelete} /> )
+        {todos.length > 0 ?
+        todos.map((todo) => <Task todo={todo} handleDelete={handleDelete} />) 
+        : 
+        "No Task to show"
         }
       </ul>
     </div>
