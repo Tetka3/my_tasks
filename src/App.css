@@ -41,7 +41,8 @@
 .task{
   display: flex;  
   align-items: center;
-  border: 1px solid red;
+  border: 1px solid rgb(180, 158, 158);
+  border-radius: 2px;
   justify-content: space-between;  
   gap: 400px;
   padding: 5px;
