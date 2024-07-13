@@ -1,9 +1,9 @@
-// import {
-//   createBrowserRouter,
-//   createRoutesFromElements,
-//   Route,
-//   RouterProvider,
-// } from "react-router-dom";
+import {
+  createBrowserRouter,
+  createRoutesFromElements,
+  Route,
+  RouterProvider,
+} from "react-router-dom";
 // import Home from "./pages/Home";
 // import Dashboard from "./pages/Dashboard";
 // import MainLayout from "./layouts/MainLayout";
@@ -12,24 +12,20 @@
 
 import Home from "./pages/Home";
 
-// const router = createBrowserRouter(
-//   createRoutesFromElements(
-//     <>
-//       <Route index element={<Home />} /> 
-     
+const router = createBrowserRouter(
+  createRoutesFromElements(
+    <>
+      <Route index element={<Home />} />     
         
-//     </>
-//   )
-// );
-
+    </>
+  )
+);
 
 function App() {
 
   return (
-    <>
-    
-      <Home />
-      {/* <RouterProvider router={router}/> */}
+    <>  
+      <RouterProvider router={router}/>
     </>
   )
 }
