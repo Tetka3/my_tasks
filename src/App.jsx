@@ -1,38 +1,35 @@
-import Navbar from "./components/Navbar"
-import Tasks from "./components/Tasks"
-import './App.css'
-import { useState } from "react"
+// import {
+//   createBrowserRouter,
+//   createRoutesFromElements,
+//   Route,
+//   RouterProvider,
+// } from "react-router-dom";
+// import Home from "./pages/Home";
+// import Dashboard from "./pages/Dashboard";
+// import MainLayout from "./layouts/MainLayout";
+// import Login from "./pages/Login";
+// import Register from "./pages/Register";
+
+import Home from "./pages/Home";
+
+// const router = createBrowserRouter(
+//   createRoutesFromElements(
+//     <>
+//       <Route index element={<Home />} /> 
+     
+        
+//     </>
+//   )
+// );
+
 
 function App() {
-  
-  const[tasks, setTasks] = useState("");
-  const [todos, setTodos]  = useState([]);
-
-  const handleChange = (e) => {
-
-    setTasks(e.target.value); 
-  }
-  const handleSubmit = (e) =>  {
-    e.preventDefault();
-    if (!tasks) return;
-    setTodos(currentTodos => [tasks, ...currentTodos]);
-    setTasks("");
-  }
-  const handleDelete = (id) =>  {
-    console.log("delete" )    
-  }
-
 
   return (
     <>
-      <Navbar/>
-      <Tasks 
-        tasks={tasks} 
-        handleSubmit={handleSubmit} 
-        handleChange={handleChange} 
-        handleDelete={handleDelete} 
-        todos={todos}
-      />
+    
+      <Home />
+      {/* <RouterProvider router={router}/> */}
     </>
   )
 }

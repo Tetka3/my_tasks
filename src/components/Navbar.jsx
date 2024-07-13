@@ -2,6 +2,8 @@ import '../App.css'
 
 
 const Navbar = () => {
+  
+
   return (
     <div className="topnav">
       <a className="active" href="#home">Home</a>
