@@ -1,7 +1,7 @@
 import Navbar from "../components/Navbar";
 import Tasks from "../components/Tasks";
 import '../App.css'
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 
 const Home = () => {
@@ -21,6 +21,10 @@ const Home = () => {
     const handleDelete = (id) =>  {
         console.log("delete" )    
     }
+
+    useEffect(() => {
+      console.log("Yap")
+    })
   return (
     <div>
       <Navbar/>      
