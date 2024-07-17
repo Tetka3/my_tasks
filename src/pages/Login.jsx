@@ -1,10 +1,12 @@
 import { useState } from 'react';
 import '../App.css'
+import { useNavigate } from "react-router-dom"
 
 const Login = () => {
 
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+  const navigate = useNavigate();
 
   const handleSubmit = (e) =>{
     e.preventDefault();
@@ -26,7 +28,7 @@ const Login = () => {
           onChange={(e) => setPassword(e.target.value)}
           value={password}
         />
-        <button>Submit</button>
+        <button onClick={() => navigate("/")}>Submit</button>
       </form>      
     </>
   )
