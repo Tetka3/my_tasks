@@ -10,8 +10,8 @@ const Login = () => {
     e.preventDefault();
   }
   return (
-    <div className='login'>
-      <form onSubmit={handleSubmit}>
+    <>
+      <form className='login' onSubmit={handleSubmit}>
         <label>Username</label>
         <input 
           type='text' 
@@ -28,7 +28,7 @@ const Login = () => {
         />
         <button>Submit</button>
       </form>      
-    </div>
+    </>
   )
 }
 
