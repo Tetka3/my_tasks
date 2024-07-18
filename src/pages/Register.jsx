@@ -1,4 +1,6 @@
+import { useState } from 'react';
 import '../App.css'
+import { useNavigate } from "react-router-dom"
 
 const Register = () => {
 
@@ -9,7 +11,7 @@ const Register = () => {
   const handleSubmit = (e) =>{
     e.preventDefault();
   }
-  
+
   return (
     <div>
       <form className='register' onSubmit={handleSubmit}>
