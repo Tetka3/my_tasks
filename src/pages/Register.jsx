@@ -37,6 +37,7 @@ const Register = () => {
           value={password}
         />
         <button onClick={() => navigate("/")}>Submit</button>
+        <p>Already have an account? Login</p>
       </form> 
     </div>
   )
