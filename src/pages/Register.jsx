@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import '../App.css'
-import { useNavigate } from "react-router-dom"
+import { useNavigate } from "react-router-dom";
+import Navbar from "../components/Navbar";
 
 const Register = () => {
 
@@ -14,6 +15,7 @@ const Register = () => {
 
   return (
     <div>
+      <Navbar />
       <form className='register' onSubmit={handleSubmit}>
         <label>Username</label>
         <input 
