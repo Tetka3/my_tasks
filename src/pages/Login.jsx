@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import '../App.css'
-import { useNavigate } from "react-router-dom"
+import { useNavigate } from "react-router-dom";
+import Navbar from "../components/Navbar";
 
 const Login = () => {
 
@@ -13,6 +14,7 @@ const Login = () => {
   }
   return (
     <>
+      <Navbar />
       <form className='login' onSubmit={handleSubmit}>
         <label>Username</label>
         <input 
