@@ -3,7 +3,23 @@ import '../App.css'
 const Register = () => {
   return (
     <div>
-      register
+      <form className='register' onSubmit={handleSubmit}>
+        <label>Username</label>
+        <input 
+          type='text' 
+          placeholder='Enter username...' 
+          onChange={(e) => setUsername(e.target.value)}
+          value={username}
+        />
+        <label>Password</label>
+        <input 
+          type='password' 
+          placeholder='Enter password...' 
+          onChange={(e) => setPassword(e.target.value)}
+          value={password}
+        />
+        <button onClick={() => navigate("/")}>Submit</button>
+      </form> 
     </div>
   )
 }
