@@ -29,6 +29,13 @@ const Register = () => {
           onChange={(e) => setPassword(e.target.value)}
           value={password}
         />
+        <label>Repeat Password</label>
+        <input 
+          type='password' 
+          placeholder='Enter password...' 
+          onChange={(e) => setPassword(e.target.value)}
+          value={password}
+        />
         <button onClick={() => navigate("/")}>Submit</button>
       </form> 
     </div>
