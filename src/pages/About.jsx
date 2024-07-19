@@ -3,7 +3,7 @@ import '../App.css';
 const About = () => {
   return (
     <div className='about'>
-      about the author 
+      <h2>About the author </h2>
     </div>
   )
 }
