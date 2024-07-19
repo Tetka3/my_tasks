@@ -1,9 +1,9 @@
-import '../App.css'
+import '../App.css';
 
 const About = () => {
   return (
-    <div>
-      about 
+    <div className='about'>
+      about the author 
     </div>
   )
 }
