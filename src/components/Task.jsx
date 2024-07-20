@@ -4,8 +4,10 @@ const Task = ({ todo, handleDelete }) => {
   return (
     <div className='task'>        
       <li>{todo}</li>
-      <button>Edit</button>
-      <button onClick={() => handleDelete(todo)}>Delete</button>
+      <div className="btns">
+        <button style={{color: "green"}}>Edit</button>
+        <button onClick={() => handleDelete(todo)}>Delete</button>
+      </div>
     </div>
   )
 }
