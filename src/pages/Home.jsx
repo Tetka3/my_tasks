@@ -26,7 +26,7 @@ const Home = () => {
       console.log("Yap")
     })
   return (
-    <div>
+    <div>      
       <Navbar/>      
       <Tasks 
         tasks={tasks} 
@@ -34,7 +34,7 @@ const Home = () => {
         handleChange={handleChange} 
         handleDelete={handleDelete} 
         todos={todos}
-      />  
+      />        
     </div>
   )
 }
