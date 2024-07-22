@@ -39,6 +39,20 @@
 .tasks ul{  
   list-style: none;
 }
+.tasks form{
+  width: 60%;
+}
+.tasks input{
+  width: 80%;
+  height: 30px;
+}
+.tasks button{
+  padding: 11px 40px;
+  background-color: green;
+  border: none;
+  margin-left: 1px;
+  border-radius: 2px;
+}
 .task{
   display: flex;  
   align-items: center;
@@ -48,7 +62,7 @@
   gap: 400px;
   padding: 5px;
   background-color: rgb(208, 231, 208);
-  
+    
 }
 .task button{
   color: red;

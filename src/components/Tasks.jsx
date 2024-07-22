@@ -11,7 +11,7 @@ const Tasks = ({ tasks, handleSubmit, handleChange, todos, handleDelete }) => {
                   type='text' 
                   placeholder='Add task' 
                   value={tasks} 
-                  onChange={handleChange}
+                  onChange={handleChange}                  
               />
               <button>Add</button>  
             </fieldset>          
