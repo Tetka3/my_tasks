@@ -61,7 +61,11 @@
   gap: 20px;
   padding: 30px;
   border: 1px solid black;
-  border-radius: 3px;
+  border-radius: 3px;  
+}
+.login input{
+  width: 40%;
+  height: 30px;
 }
 .register {
   display: flex;
