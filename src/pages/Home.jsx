@@ -6,10 +6,13 @@ import { useState, useEffect } from "react";
 
 const Home = () => {
     const[tasks, setTasks] = useState("");
-    const [todos, setTodos]  = useState([]);    
+    const [todos, setTodos]  = useState([{
+      id: 1,
+      text: "Make bed",
+      check: false
+    }]);    
 
     const handleChange = (e) => {
-
         setTasks(e.target.value); 
     }
     const handleSubmit = (e) =>  {
@@ -18,8 +21,8 @@ const Home = () => {
         setTodos(currentTodos => [tasks, ...currentTodos]);
         setTasks("");
     }
-    const handleDelete = (id) =>  {
-        console.log("delete" )    
+    const handleDelete = (id) =>  {         
+        setTodos(todos.filter(todo => todo.id !== id))   
     }
 
     useEffect(() => {
