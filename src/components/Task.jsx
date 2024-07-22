@@ -5,8 +5,8 @@ const Task = ({ todo, handleDelete }) => {
     <div className='task'>        
       <li>{todo}</li>
       <div className="btns">
-        <button style={{color: "green"}}>Edit</button>
-        <button onClick={() => handleDelete(todo)}>Delete</button>
+        <button style={{backgroundColor: "green"}}>Edit</button>
+        <button onClick={() => handleDelete(todo)} style={{backgroundColor: "red"}}>Delete</button>
       </div>
     </div>
   )
