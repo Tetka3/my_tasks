@@ -1,7 +1,7 @@
 import React from 'react';
 import Task from './Task';
 
-const Tasks = ({ tasks, handleSubmit, handleChange, todos, handleDelete }) => {
+const Tasks = ({ tasks, handleSubmit, handleChange, todos, handleDelete, onToggle }) => {
   return (
     <div className='tasks'>
         <form onSubmit={handleSubmit}> 
@@ -18,7 +18,12 @@ const Tasks = ({ tasks, handleSubmit, handleChange, todos, handleDelete }) => {
         </form>
       <ul>
         {todos.length > 0 ?
-        todos.map((todo) => <Task todo={todo} handleDelete={handleDelete} key={todo.id}/>) 
+        todos.map((todo) => <Task 
+          todo={todo} 
+          handleDelete={handleDelete} 
+          key={todo.id}
+          onToggle={onToggle}
+        />) 
         : 
         "No Task to show"
         }

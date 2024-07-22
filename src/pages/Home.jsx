@@ -9,7 +9,7 @@ const Home = () => {
     const [todos, setTodos]  = useState([{
       id: 1,
       text: "Make bed",
-      check: false
+      reminder: false
     }]);    
 
     const handleChange = (e) => {
@@ -24,6 +24,9 @@ const Home = () => {
     const handleDelete = (id) =>  {         
         setTodos(todos.filter(todo => todo.id !== id))   
     }
+    const toggleReminder = (id) => {
+      setTodos(todos.map((todo) => todo.id ===  id ? {...todo, reminder: !todo.reminder} : todo))
+    }
 
     useEffect(() => {
       console.log("Yap")
@@ -37,6 +40,7 @@ const Home = () => {
         handleChange={handleChange} 
         handleDelete={handleDelete} 
         todos={todos}
+        onToggle={toggleReminder}
       />        
     </div>
   )
