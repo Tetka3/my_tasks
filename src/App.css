@@ -76,6 +76,10 @@
   border: 1px solid black;
   border-radius: 3px;
 }
+.register input{
+  width: 40%;
+  height: 30px;
+}
 .about{
   border: 1px solid black;
   height:  100vh; 
