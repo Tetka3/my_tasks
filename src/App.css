@@ -1,0 +1,108 @@
+#root {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.topnav li {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  list-style: none;
+}
+
+.topnav li:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav li.active {
+  background-color: #04AA6D;
+  color: white;
+}
+.tasks{
+  display: flex;
+  flex-direction: column;
+  border: 1px solid black;
+  border-radius: 3px;
+  align-items: center;  
+  padding: 20px;
+  margin-top: 10px;
+}
+.tasks ul{  
+  list-style: none;
+}
+.tasks form{
+  width: 60%;
+}
+.tasks input{
+  width: 80%;
+  height: 30px;
+}
+.tasks button{
+  padding: 11px 40px;
+  background-color: green;
+  border: none;
+  margin-left: 1px;
+  border-radius: 2px;
+}
+.todo{
+  display: flex;  
+  align-items: center;
+  border: 1px solid rgb(180, 158, 158);
+  border-radius: 2px;
+  justify-content: space-between;  
+  gap: 400px;
+  padding: 5px;
+  background-color: rgb(208, 231, 208);    
+}
+.todo.reminder{
+  border-left: 10px solid red;
+}
+.todo button{
+  color: white;
+  padding: 5px 15px;
+}
+.login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 30px;
+  border: 1px solid black;
+  border-radius: 3px;  
+}
+.login input{
+  width: 40%;
+  height: 30px;
+}
+.register {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 30px;
+  border: 1px solid black;
+  border-radius: 3px;
+}
+.register input{
+  width: 40%;
+  height: 30px;
+}
+.about{
+  border: 1px solid black;
+  height:  100vh; 
+  border-radius: 3px;
+}
+.about h2{
+  text-align: center;
+}
+
+
