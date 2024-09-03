@@ -3,15 +3,26 @@ import '../App.css'
 import { useNavigate } from "react-router-dom";
 import Navbar from "../components/Navbar";
 
+
+
 const Login = () => {
 
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+  const [blogs, setBlogs] = useState(["Blog 1", "Blog 2"]);
   const navigate = useNavigate();
 
   const handleSubmit = (e) =>{
     e.preventDefault();
   }
+
+  const getBlogs = () => {
+    setBlogs(prev => [...prev, `Blog ${blogs.length + 1}`])
+  }
+  const handleDelete = (id) => {
+    setBlogs(blogs.filter(blog => blog.id !== id))
+  }
+
   return (
     <>
       <Navbar />
@@ -37,7 +48,13 @@ const Login = () => {
           value={password}
         />
         <button onClick={() => navigate("/")}>Submit</button>
-      </form>      
+      </form>  
+      <button onClick={getBlogs}>Add</button>
+      <ul>
+      {
+        blogs.map((blog) => <li>{blog} <button onClick={() => handleDelete(blog.id)}>Delete</button></li>)
+      } 
+      </ul>   
     </>
   )
 }

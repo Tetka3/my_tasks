@@ -104,5 +104,11 @@
 .about h2{
   text-align: center;
 }
+.btn{
+  background-color: red;
+}
+.btn-primary{
+  background-color: green;
+}
 
 

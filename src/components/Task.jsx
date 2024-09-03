@@ -1,9 +1,9 @@
 import React from 'react'
 
-const Task = ({ todo, handleDelete, onToggle }) => {
+const Task = ({ todo, key, handleDelete }) => {
   return (
-    <div className={`todo ${todo.reminder} ? "reminder" : "" `} onDoubleClick={() => onToggle(todo.id)} key={todo.id}>        
-      <li >{todo.text}</li>
+    <div className="todo">        
+      <li key={key}>{todo.text}</li>
       <div className="btns">
         <button style={{backgroundColor: "green"}}>Edit</button>
         <button onClick={() => handleDelete(todo.id)} style={{backgroundColor: "red"}}>Delete</button>
