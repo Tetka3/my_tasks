@@ -1,19 +1,10 @@
-import React, { useEffect, useState } from 'react';
-import Task from './Task';
-import axios from "axios"
+// import React, { useEffect, useState } from 'react';
+// import Task from './Task';
+
 
 const Tasks = ({ tasks, handleSubmit, handleChange, todos, handleDelete }) => {
 
-  const [blogs, setBlogs] = useState([]);
-
-  const fetchPosts = async () => {
-    const posted = await axios.get("https://jsonplaceholder.typicode.com/posts");
-    setBlogs(posted.data);
-  }
-
-  useEffect (()=>{
-    fetchPosts();
-  }, [])
+ 
   return (
     <div className='tasks'>
         <form onSubmit={handleSubmit}> 
@@ -35,11 +26,7 @@ const Tasks = ({ tasks, handleSubmit, handleChange, todos, handleDelete }) => {
         "No Task to show"
         }
       </ul>
-      <ul>
-      {
-        blogs.map((blog, index) => (<li key={index} className='posts'>{blog.title}</li>))
-      }
-      </ul>
+      
     </div>
   )
 }
