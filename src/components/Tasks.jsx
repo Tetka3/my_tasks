@@ -1,5 +1,5 @@
 // import React, { useEffect, useState } from 'react';
-// import Task from './Task';
+import Task from './Task';
 
 
 const Tasks = ({ tasks, handleSubmit, handleChange, todos, handleDelete }) => {
@@ -21,7 +21,7 @@ const Tasks = ({ tasks, handleSubmit, handleChange, todos, handleDelete }) => {
         </form>
       <ul>
         {todos.length > 0 ?
-        todos.map((item) => <li key={item.id}>{item.text}</li> ) 
+        todos.map((todo) => <Task key={todo.id} todo={todo} handleDelete={handleDelete}/>) 
         : 
         "No Task to show"
         }

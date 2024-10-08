@@ -35,7 +35,7 @@ const Home = () => {
     }
 
     useEffect(() => {
-      console.log("Yap")
+      
     }, [])
   return (
     <div>      
